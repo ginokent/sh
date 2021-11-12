@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -e -E -o pipefail
-cat >/dev/null << '#djeeno.github.io/sh'
+cat >/dev/null << '#newtstat.github.io/sh'
 <link rel="icon" href="/favicon.ico" type="image/x-icon"><style>body{font-size:0;margin:0}code{font-size:1rem;font-family:'Ricty Diminished',Osaka,Menlo,Monaco,Consolas,'Courier New','Andale Mono','Ubuntu Mono',monospace}</style><pre><code>##
-#djeeno.github.io/sh
+#newtstat.github.io/sh
 ##
 
 # Run the following command to install:
-#   $ curl https://djeeno.github.io/sh/mitmproxy/ | bash
+#   $ curl https://newtstat.github.io/sh/mitmproxy/ | bash
 
-httpGet="$( { command -v curl 1>/dev/null && printf "curl -fLRSs"; } || { command -v wget 1>/dev/null && printf "wget -O- -q"; } )"; export httpGet; [ "${httpGet:?"curl or wget are required"}" ] || exit 1; [ "${envIsLoaded:-false}" = true ] || eval "$(sh -c "exec ${httpGet} https://djeeno.github.io/sh/common/")" || exit 1 ##httpGet##
+httpGet="$( { command -v curl 1>/dev/null && printf "curl -fLRSs"; } || { command -v wget 1>/dev/null && printf "wget -O- -q"; } )"; export httpGet; [ "${httpGet:?"curl or wget are required"}" ] || exit 1; [ "${envIsLoaded:-false}" = true ] || eval "$(sh -c "exec ${httpGet} https://newtstat.github.io/sh/common/")" || exit 1 ##httpGet##
 
 echo "  PYTHON_PATH=${PYTHON_PATH:-USE_DEFAULT}" | sh -c "${pipe_info:?}"
 echo "  VIRTUALENV_NAME=${VIRTUALENV_NAME:-USE_DEFAULT}" | sh -c "${pipe_info:?}"
@@ -34,4 +34,4 @@ env bash -cx "\"${virtualenv_dir}/bin/python\" -m pip install -U --no-cache-dir 
 echo "install locust_extractor ref: https://github.com/zlorb/locust.replay/blob/master/locust_extractor.py" | sh -c "${pipe_info:?}"
 env bash -cx "mkdir -p ~/lib && curl -fLSs -o ~/lib/locust_extractor.py https://raw.githubusercontent.com/zlorb/locust.replay/master/locust_extractor.py"
 
-# (C) 2018 djeeno </code></pre></div>
+# (C) 2018 newtstat </code></pre></div>
