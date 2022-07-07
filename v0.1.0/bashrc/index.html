@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 set -e -E -o pipefail
-cat >/dev/null << '#newtstat.github.io/sh'
+cat >/dev/null << '#ginokent.github.io/sh'
 <link rel="icon" href="/favicon.ico" type="image/x-icon"><style>body{font-size:0;margin:0}code{font-size:1rem;font-family:'Ricty Diminished',Osaka,Menlo,Monaco,Consolas,'Courier New','Andale Mono','Ubuntu Mono',monospace}</style><pre><code>##
-#newtstat.github.io/sh
+#ginokent.github.io/sh
 ##
 
 # Run the following command to execute this script:
-#   $ curl https://newtstat.github.io/sh/v0.1.0/bashrc/ | bash
+#   $ curl https://ginokent.github.io/sh/v0.1.0/bashrc/ | bash
 
-httpGet="$( { command -v curl 1>/dev/null && printf "curl -LRsS "; } || { command -v wget 1>/dev/null && printf "wget -qO- "; } )"; export httpGet; [ "${httpGet:?"curl or wget are required"}" ] || exit 1; [ "${envIsLoaded:-false}" = true ] || eval "$(sh -c "exec ${httpGet} https://newtstat.github.io/sh/v0.1.0/common/")" || exit 1 ##httpGet##
+httpGet="$( { command -v curl 1>/dev/null && printf "curl -LRsS "; } || { command -v wget 1>/dev/null && printf "wget -qO- "; } )"; export httpGet; [ "${httpGet:?"curl or wget are required"}" ] || exit 1; [ "${envIsLoaded:-false}" = true ] || eval "$(sh -c "exec ${httpGet} https://ginokent.github.io/sh/v0.1.0/common/")" || exit 1 ##httpGet##
 
 echo "  BASHRC=${BASHRC:-default}" | sh -c "${pipe_info:?}"
 bashrc="${BASHRC:=$HOME/.bashrc}"
 
-if ! grep -q "^#.newtstat.github.io/sh/v0.1.0/bashrc" "${bashrc:?}"; then
+if ! grep -q "^#.ginokent.github.io/sh/v0.1.0/bashrc" "${bashrc:?}"; then
   echo "Add bashrc settings" | sh -c "${pipe_info:?}"
   bashrc_content=$(cat << "BASHRC"
 
 ##
-# newtstat.github.io/sh/v0.1.0/bashrc/
+# ginokent.github.io/sh/v0.1.0/bashrc/
 ##
 
 # HTTP GET Client
@@ -44,7 +44,7 @@ fi
 
 # direnv
 if ! command -v direnv 1>/dev/null; then
-  ${httpGet:?} https://newtstat.github.io/sh/v0.1.0/direnv/ | bash
+  ${httpGet:?} https://ginokent.github.io/sh/v0.1.0/direnv/ | bash
 fi
 if command -v direnv 1>/dev/null; then
   eval "$(direnv hook bash)"
@@ -60,4 +60,4 @@ fi
 
 
 
-# (C) 2018 newtstat </code></pre></div>
+# (C) 2018 ginokent </code></pre></div>

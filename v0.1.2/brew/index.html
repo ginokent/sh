@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -e -E -o pipefail
-cat >/dev/null << '#newtstat.github.io/sh'
+cat >/dev/null << '#ginokent.github.io/sh'
 <link rel="icon" href="/favicon.ico" type="image/x-icon"><style>body{font-size:0;margin:0}code{font-size:1rem;font-family:'Ricty Diminished',Osaka,Menlo,Monaco,Consolas,'Courier New','Andale Mono','Ubuntu Mono',monospace}</style><pre><code>##
-#newtstat.github.io/sh
+#ginokent.github.io/sh
 ##
 
 # Run the following command to execute this script:
-#   $ curl https://newtstat.github.io/sh/v0.1.2/brew/ | bash
+#   $ curl https://ginokent.github.io/sh/v0.1.2/brew/ | bash
 
-httpGet="$( { command -v curl 1>/dev/null && printf "curl -fLRSs"; } || { command -v wget 1>/dev/null && printf "wget -O- -q"; } )"; export httpGet; [ "${httpGet:?"curl or wget are required"}" ] || exit 1; [ "${envIsLoaded:-false}" = true ] || eval "$(sh -c "exec ${httpGet} https://newtstat.github.io/sh/v0.1.2/common/")" || exit 1 ##httpGet##
+httpGet="$( { command -v curl 1>/dev/null && printf "curl -fLRSs"; } || { command -v wget 1>/dev/null && printf "wget -O- -q"; } )"; export httpGet; [ "${httpGet:?"curl or wget are required"}" ] || exit 1; [ "${envIsLoaded:-false}" = true ] || eval "$(sh -c "exec ${httpGet} https://ginokent.github.io/sh/v0.1.2/common/")" || exit 1 ##httpGet##
 
 echo "  BREW_VERSION=latest" | sh -c "${pipe_info:?}"
 prog_name=brew
@@ -33,4 +33,4 @@ echo "${prog_name:?} installed" | sh -c "${pipe_ok:?}"
 
 
 
-# (C) 2018 newtstat </code></pre></div>
+# (C) 2018 ginokent </code></pre></div>

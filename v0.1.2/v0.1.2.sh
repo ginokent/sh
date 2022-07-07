@@ -4,7 +4,7 @@ set -E -e -o pipefail
 cd "$(dirname "$0")" || exit 1
 
 VERSION=$(basename "$(cd "$(dirname "$0")"; pwd)")
-URL_BASE=newtstat.github.io/sh
+URL_BASE=ginokent.github.io/sh
 
 copy_and_overwrite () {
   rm -rf ./"${1:?}" || true
